@@ -1,0 +1,78 @@
+/* General page setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full height of the viewport */
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 320px;  /* Fixed width */
+}
+
+/* Styling for result display */
+#result {
+    width: 100%;
+    height: 60px;  /* Increase height for visibility */
+    font-size: 1.8em;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Grid setup for buttons */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal-width columns */
+    grid-gap: 10px;  /* Spacing between buttons */
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+}
+
+button:hover {
+    background-color: #e0e0e0;  /* Change background on hover */
+}
+
+/* Clear and Equal button styling */
+button#clear, button#equal {
+    background-color: #ff9999;
+    color: white;
+    grid-column: span 2;  /* These buttons span 2 columns */
+}
+
+button#clear:hover, button#equal:hover {
+    background-color: #ff4d4d;
+}
+
+button#add, button#subtract, button#multiply, button#divide {
+    background-color: #ffd633;
+}
+
+button#add:hover, button#subtract:hover, button#multiply:hover, button#divide:hover {
+    background-color: #ffcc00;
+}
